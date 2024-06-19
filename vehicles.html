@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
@@ -22,17 +23,35 @@
             <a href="contact.html">Contact Us</a>
         </div>
         <h1>Vehicles</h1>
-        <div class="services">
-            <table class="services-table">
-                <tr>
+
+        <div class="vehicles">
+            <table class="vehicles-table">
+                <thead>
                     <th>Manufacturer</th>
                     <th>Model</th>
                     <th>Color</th>
                     <th>Year</th>
-                    <th>ForSale</th>
-                </tr>
-                <tbody id="vehicles"></tbody>
+                    <th>For Sale</th>
+                    <th>Actions</th>
+                </thead>
+                <tbody id="vehicles-body"></tbody>
             </table>
+        </div>
+        <div class="vehicles-form">
+            <p>Enter new vehicle information and press submit</p>
+            <form id="form">
+                <label for="manufacturer">Manufacturer: <input id="manufacturer" name="manufacturer" type="text"
+                        required /></label>
+                <label for="model">Model: <input id="model" name="model" type="text" required /></label>
+                <label for="color">Color: <input id="color" name="color" type="text" required /></label>
+                <label for="year">Year:
+                    <input id="year" type="number" min="1900" max="2099" step="1" value="2024" required /></label>
+                <label for="is-forsale"><input id="is-forsale" type="radio" name="for-sale" class="inline" checked />
+                    For Sale</label>
+                <label for="not-forsale"><input id="not-forsale" type="radio" name="for-sale" class="inline" /> Not For
+                    Sale</label>
+                <input type="submit" value="Submit" />
+            </form>
         </div>
     </div>
 
@@ -40,4 +59,5 @@
 <footer>
     <p>&copy; 2024 Vehicles Corporation. All rights reserved.</p>
 </footer>
+
 </html>

@@ -92,7 +92,7 @@ th, td{
     grid-column: span 2;
 }
 
-.services-table{
+.services-table, .vehicles-table{
     margin: 0 auto;
 }
 tr:hover {background-color: #ffffff88;}
@@ -145,4 +145,33 @@ label, input, textarea{
 
 input[type="submit"]{
     width:103%;
+}
+
+/* vehicles */
+.vehicles-table{
+    margin-top: 10%;
+}
+
+.vehicles-form{
+    display:block;
+    margin: 0 auto;
+}
+
+.vehicles-form p{
+    font-size: 1.5rem;
+}
+
+.inline{
+    display: inline; 
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+.vehicles-form input{
+    font-size: 1.2rem;;
+}
+
+.vehicles-form input[type="submit"]{
+    margin-top: 5%;
 }
