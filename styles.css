@@ -2,6 +2,7 @@
 body{
     margin: 0;
     background-color: rgb(201, 201, 201);
+    height: 100vh;
 }
 .main {
     display: grid;
@@ -9,7 +10,6 @@ body{
     grid-template-rows: auto auto;
     gap: 30px;
     font-family: "Red Hat Display", sans-serif;
-
 }
 
 h1{
@@ -22,7 +22,7 @@ h1{
 
 footer{
     float: right;
-    margin-top: 150px;
+    margin-top: 5%;
     margin-right: 50px;
 }
 
@@ -117,4 +117,32 @@ tr:hover {background-color: #ffffff88;}
 .history p{
     margin: 50px;
     text-align: center;
+}
+
+/* form */
+.form-text{
+    font-size: 3rem;
+    grid-column: span 2;
+    text-align: center;
+    margin-top: -4%;
+}
+
+form{
+    grid-column: span 2;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+input, textarea {
+    border: 1px solid #0a0a23;
+    margin-bottom: 5%;
+    width: 100%;
+  }
+
+label, input, textarea{
+    display:block;
+}
+
+input[type="submit"]{
+    width:103%;
 }
