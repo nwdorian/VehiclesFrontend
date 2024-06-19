@@ -32,16 +32,12 @@ const seedData = [
 const vehicleData = JSON.parse(localStorage.getItem("vehicles"));
 
 function seedLocalStorage(seedData) {
-  if (vehicleData == null) {
-    seedLocalStorage(seedData);
-  }
   localStorage.setItem("vehicles", JSON.stringify(seedData));
 }
 
-document.addEventListener(
-  window.location.href.endsWith("vehicles.html"),
-  displayData()
-);
+if (vehicleData == null) {
+  seedLocalStorage(seedData);
+}
 
 function displayData() {
   const table = document.getElementById("vehicles-body");
@@ -71,3 +67,8 @@ function displayData() {
     forSale.innerHTML = v.forSale ? "Yes" : "No";
   });
 }
+
+document.addEventListener(
+  window.location.href.endsWith("vehicles.html"),
+  displayData()
+);
